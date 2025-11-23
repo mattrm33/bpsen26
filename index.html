@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portail Élèves - Bac Pro CIEL / SEN Valence. Accès aux cours, TP et emplois du temps.">
+    <meta name="description" content="Portail Élèves - Bac Pro CIEL / SEN Valence. Accès aux ressources pédagogiques.">
     <title>Accueil - Bac Pro CIEL Valence</title>
     
-    <!-- Google Fonts (Inter) for modern typography -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
+    <!-- Icons (Phosphor Icons for lightweight SVGs) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +22,8 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <span class="logo-accent">BAC PRO</span> CIEL
+                <i class="ph ph-cpu"></i>
+                <span>BAC PRO <span class="logo-accent">CIEL</span></span>
             </a>
             
             <button class="mobile-menu-btn" aria-label="Ouvrir le menu">
@@ -30,142 +34,176 @@
 
             <ul class="nav-links">
                 <li><a href="#accueil" class="active">Accueil</a></li>
-                <li><a href="#emploi-du-temps">Emploi du temps</a></li>
                 <li><a href="#cours">Cours & TP</a></li>
-                <li><a href="#referentiel">Référentiel</a></li>
+                <li><a href="#outils">Boîte à Outils</a></li>
+                <li><a href="#referentiel" class="btn-nav">Référentiel</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header id="accueil" class="hero">
+        <div class="hero-bg-animation"></div>
         <div class="container hero-content">
-            <h1>Bienvenue sur le portail <span class="text-gradient">CIEL / SEN</span></h1>
-            <p>Espace numérique de travail pour les élèves du Lycée de Valence. Retrouvez vos supports de cours, TP et plannings.</p>
-            <div class="hero-buttons">
-                <a href="#cours" class="btn btn-primary">Accéder aux Cours</a>
-                <a href="#emploi-du-temps" class="btn btn-secondary">Voir mon Planning</a>
+            <span class="badge">Nouvelle Rentrée 2024-2025</span>
+            <h1>Espace Numérique <br><span class="text-gradient">Lycée de Valence</span></h1>
+            <p>Accédez à l'ensemble de vos dossiers techniques : Numérique, Réseau, Routage et Télécoms.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Niveaux (2nde, 1ère, Term)</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Modules Techniques</span>
+                </div>
             </div>
+
+            <a href="#cours" class="btn btn-primary scroll-btn">
+                Accéder aux Cours <i class="ph ph-arrow-down"></i>
+            </a>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="container">
         
-        <!-- Section: Emploi du temps -->
-        <section id="emploi-du-temps" class="section fade-in">
+        <!-- Section: Cours et TP (Integrated from original site) -->
+        <section id="cours" class="section fade-in">
             <div class="section-header">
-                <h2>📅 Emploi du temps</h2>
-                <p>Sélectionnez votre classe et la semaine en cours.</p>
+                <h2>📂 Cours et Travaux Pratiques</h2>
+                <p>Sélectionnez votre niveau pour accéder aux dossiers.</p>
             </div>
 
-            <!-- Tabs for Weeks -->
-            <div class="tabs">
-                <button class="tab-btn active" data-target="semaine-a">Semaine A</button>
-                <button class="tab-btn" data-target="semaine-b">Semaine B</button>
-            </div>
-
-            <!-- Content Semaine A -->
-            <div id="semaine-a" class="tab-content active">
-                <div class="grid-3">
-                    <div class="card">
+            <div class="grid-3">
+                <!-- 2nde TNE (Content from original site) -->
+                <div class="card folder-card">
+                    <div class="card-header color-1">
+                        <i class="ph ph-student"></i>
                         <h3>2nde TNE</h3>
-                        <a href="#" class="link-arrow">Voir Planning A &rarr;</a>
+                        <span class="subtitle">Transition Numérique</span>
                     </div>
-                    <div class="card">
-                        <h3>1ère CIEL</h3>
-                        <a href="#" class="link-arrow">Voir Planning A &rarr;</a>
-                    </div>
-                    <div class="card">
-                        <h3>Terminale CIEL</h3>
-                        <a href="#" class="link-arrow">Voir Planning A &rarr;</a>
+                    <div class="card-body">
+                        <ul class="folder-list">
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-folder-simple"></i> Activités de découverte
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-folder-simple"></i> Dossier Numérique
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-folder-simple"></i> Dossier Réseau
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-globe"></i> Dossier Site WEB
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <!-- Content Semaine B -->
-            <div id="semaine-b" class="tab-content">
-                <div class="grid-3">
-                    <div class="card">
-                        <h3>2nde TNE</h3>
-                        <a href="#" class="link-arrow">Voir Planning B &rarr;</a>
-                    </div>
-                    <div class="card">
+                <!-- 1ère CIEL (Content from original site) -->
+                <div class="card folder-card">
+                    <div class="card-header color-2">
+                        <i class="ph ph-desktop-tower"></i>
                         <h3>1ère CIEL</h3>
-                        <a href="#" class="link-arrow">Voir Planning B &rarr;</a>
+                        <span class="subtitle">Cybersécurité & Elec</span>
                     </div>
-                    <div class="card">
+                    <div class="card-body">
+                        <ul class="folder-list">
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-folder-simple"></i> Dossier Numérique
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-share-network"></i> Services Réseaux
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Terminale CIEL (Content from original site) -->
+                <div class="card folder-card">
+                    <div class="card-header color-3">
+                        <i class="ph ph-graduation-cap"></i>
                         <h3>Terminale CIEL</h3>
-                        <a href="#" class="link-arrow">Voir Planning B &rarr;</a>
+                        <span class="subtitle">Expertise & Projets</span>
+                    </div>
+                    <div class="card-body">
+                        <ul class="folder-list">
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-folder-simple"></i> Activités de formation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-hard-drives"></i> Dossier Réseau
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-arrows-split"></i> Dossier Routage
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ph ph-broadcast"></i> Dossier Télécom
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section: Cours et TP -->
-        <section id="cours" class="section fade-in">
+        <!-- NEW Section: Toolbox (Added Enhancement) -->
+        <section id="outils" class="section fade-in">
             <div class="section-header">
-                <h2>📚 Cours et Travaux Pratiques</h2>
-                <p>Ressources pédagogiques par domaine technique.</p>
+                <h2>🛠️ Boîte à Outils</h2>
+                <p>Les indispensables pour le technicien CIEL.</p>
             </div>
 
-            <div class="grid-2">
-                <!-- Category 1 -->
-                <div class="card feature-card">
-                    <div class="icon-box">💻</div>
-                    <h3>Informatique & Réseaux</h3>
-                    <ul class="resource-list">
-                        <li><a href="#">Adressage IP & Masques</a></li>
-                        <li><a href="#">VLAN & Trunking</a></li>
-                        <li><a href="#">Services Réseaux (DHCP/DNS)</a></li>
-                        <li><a href="#">Linux & Commandes</a></li>
-                    </ul>
-                </div>
-
-                <!-- Category 2 -->
-                <div class="card feature-card">
-                    <div class="icon-box">📡</div>
-                    <h3>Télécoms & Électronique</h3>
-                    <ul class="resource-list">
-                        <li><a href="#">Fibre Optique</a></li>
-                        <li><a href="#">Domotique & IoT</a></li>
-                        <li><a href="#">Traitement du signal</a></li>
-                        <li><a href="#">Mesures électriques</a></li>
-                    </ul>
-                </div>
-
-                <!-- Category 3 -->
-                <div class="card feature-card">
-                    <div class="icon-box">🌐</div>
-                    <h3>Développement Web</h3>
-                    <ul class="resource-list">
-                        <li><a href="#">HTML / CSS / JS</a></li>
-                        <li><a href="#">Projets PHP</a></li>
-                        <li><a href="#">Bases de données SQL</a></li>
-                    </ul>
-                </div>
-
-                <!-- Category 4 -->
-                <div class="card feature-card">
-                    <div class="icon-box">📂</div>
-                    <h3>Documents Administratifs</h3>
-                    <ul class="resource-list">
-                        <li><a href="#">Règlement intérieur</a></li>
-                        <li><a href="#">Convention de stage</a></li>
-                        <li><a href="#">Charte informatique</a></li>
-                    </ul>
-                </div>
+            <div class="tools-grid">
+                <a href="https://code.visualstudio.com/" target="_blank" class="tool-item">
+                    <i class="ph ph-code"></i>
+                    <span>VS Code</span>
+                </a>
+                <a href="https://www.calculator.net/ip-subnet-calculator.html" target="_blank" class="tool-item">
+                    <i class="ph ph-calculator"></i>
+                    <span>Calc IP</span>
+                </a>
+                <a href="https://fr.wikipedia.org/wiki/Modèle_OSI" target="_blank" class="tool-item">
+                    <i class="ph ph-stack"></i>
+                    <span>Modèle OSI</span>
+                </a>
+                <a href="https://www.packettracernetwork.com/" target="_blank" class="tool-item">
+                    <i class="ph ph-network"></i>
+                    <span>Packet Tracer</span>
+                </a>
             </div>
         </section>
 
         <!-- Section: Référentiel -->
-        <section id="referentiel" class="section highlight-box fade-in">
-            <div class="flex-row">
-                <div>
-                    <h3>📄 Référentiel du Diplôme</h3>
-                    <p>Téléchargez le référentiel complet du Bac Pro CIEL (Cybersécurité, Informatique et réseaux, Électronique).</p>
-                </div>
-                <a href="#" class="btn btn-outline">Télécharger PDF</a>
+        <section id="referentiel" class="cta-box fade-in">
+            <div class="cta-content">
+                <h3><i class="ph ph-file-pdf"></i> Référentiel du Diplôme</h3>
+                <p>Document officiel définissant les compétences attendues pour le Bac Pro CIEL (anciennement SEN).</p>
+            </div>
+            <div class="cta-action">
+                <a href="#" class="btn btn-white">Télécharger PDF</a>
             </div>
         </section>
 
@@ -174,25 +212,14 @@
     <!-- Footer -->
     <footer>
         <div class="container footer-content">
-            <div class="footer-col">
+            <div class="footer-left">
                 <h4>Bac Pro CIEL Valence</h4>
-                <p>Formation aux métiers du numérique et de la transition énergétique.</p>
+                <p>Lycée Professionnel de Valence</p>
             </div>
-            <div class="footer-col">
-                <h4>Liens Utiles</h4>
-                <ul class="footer-links">
-                    <li><a href="https://alwaysdata.com">Hébergé par Alwaysdata</a></li>
-                    <li><a href="#">Pronote</a></li>
-                    <li><a href="#">ENT Région</a></li>
-                </ul>
+            <div class="footer-right">
+                <p>Hébergé sur <a href="https://alwaysdata.com">alwaysdata</a></p>
+                <p>&copy; 2024 - Design modernisé</p>
             </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>Pour toute question technique, contactez votre administrateur réseau.</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023-2024 Bac Pro CIEL Valence. Tous droits réservés.</p>
         </div>
     </footer>
 
